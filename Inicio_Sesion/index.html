@@ -1,0 +1,69 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML -->
+<html lang="es"> <!-- Etiqueta raíz del documento con el atributo de idioma -->
+<head>
+    <meta charset="UTF-8"> <!-- Configuración de la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de la vista adaptable para dispositivos móviles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> <!-- Enlace a una hoja de estilo externa (FontAwesome) para iconos -->
+    <link rel="stylesheet" href="CSS/Style.css"> <!-- Enlace a una hoja de estilo externa (tu archivo CSS personalizado) -->
+    <title>Login</title> <!-- Título de la página que se muestra en la barra de título del navegador -->
+</head>
+<body>
+    <div class="container" id="container"> <!-- Contenedor principal -->
+        <div class="form-container sign-up"> <!-- Contenedor del formulario de registro -->
+            <form> <!-- Formulario de registro -->
+                <h1>Registro</h1> <!-- Título del formulario de registro -->
+                <span>Usa tu # de socio para registrarte.</span> <!-- Descripción del formulario de registro -->
+                <input type="text" placeholder="Nombre"> <!-- Campo de entrada para el nombre del usuario -->
+                <input type="email" placeholder="# de Socio"> <!-- Campo de entrada para el número de socio del usuario -->
+                <input type="password" placeholder="Contraseña"> <!-- Campo de entrada para la contraseña del usuario -->
+                <button>Registrar</button> <!-- Botón para enviar el formulario de registro -->
+            </form>
+        </div>
+        <div class="form-container sign-in"> <!-- Contenedor del formulario de inicio de sesión -->
+            <form> <!-- Formulario de inicio de sesión -->
+                <h1>Inicia Sesión</h1> <!-- Título del formulario de inicio de sesión -->
+                <span>Utiliza tu # de socio.</span> <!-- Descripción del formulario de inicio de sesión -->
+                <input type="email" placeholder="# De Socio."> <!-- Campo de entrada para el número de socio del usuario en el formulario de inicio de sesión -->
+                <input type="password" placeholder="Contraseña"> <!-- Campo de entrada para la contraseña del usuario en el formulario de inicio de sesión -->
+                <a href="#">¿Olvidaste la contraseña?</a> <!-- Enlace para restablecer la contraseña -->
+                <button>Iniciar</button> <!-- Botón para enviar el formulario de inicio de sesión -->
+            </form>
+        </div>
+        <div class="toggle-container"> <!-- Contenedor de alternancia entre registro e inicio de sesión -->
+            <div class="toggle"> <!-- Elemento de alternancia -->
+                <div class="toggle-panel toggle-left"> <!-- Panel izquierdo de alternancia (para iniciar sesión) -->
+                    <h1>¡Bienvenido!</h1> <!-- Título del panel izquierdo -->
+                    <p>Te esperamos con ansias.</p> <!-- Descripción del panel izquierdo -->
+                    <button class="hidden" id="login">Iniciar Sesión</button> <!-- Botón para alternar al inicio de sesión (oculto por defecto) -->
+                </div>
+                <div class="toggle-panel toggle-right"> <!-- Panel derecho de alternancia (para registro) -->
+                    <h1>¡Hola!</h1> <!-- Título del panel derecho -->
+                    <p>Regístrate si aún no cuentas con un usuario.</p> <!-- Descripción del panel derecho -->
+                    <button class="hidden" id="register">Registro</button> <!-- Botón para alternar al registro (oculto por defecto) -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="JS/js.js"></script> <!-- Enlace a un archivo JavaScript externo -->
+    <script>
+        // JavaScript para cambiar dinámicamente el fondo del body
+        const container = document.getElementById('container'); // Contenedor principal
+        const registerBtn = document.getElementById('register'); // Botón de registro
+        const loginBtn = document.getElementById('login'); // Botón de inicio de sesión
+    
+        // Agregar un evento de clic al botón de registro
+        registerBtn.addEventListener('click', () => {
+            container.classList.add("active");
+            document.body.classList.remove('body-login');
+            document.body.classList.add('body-register');
+        });
+    
+        // Agregar un evento de clic al botón de inicio de sesión
+        loginBtn.addEventListener('click', () => {
+            container.classList.remove("active");
+            document.body.classList.remove('body-register');
+            document.body.classList.add('body-login');
+        });
+    </script>
+</body>
+</html>

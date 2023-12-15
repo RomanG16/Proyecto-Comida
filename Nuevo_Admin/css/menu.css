@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background: rgba(255, 255, 255);
+}
+
+/* Encabezado */
+
+.encabezado{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 150px;
+}
+
+/* .usuario img{
+    width: 50px;
+    margin-left: auto;
+} */
+
+.encabezado ul li {
+    list-style: none;
+}
+
+nav > ul > li:first-child > a#selected-usuario{
+    background-image: url(../Img/usuario1.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 40px;
+}
+
+nav > ul > li:first-child:hover > a#selected-usuario{
+    background-image: url(../Img/usuario1.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#selected-usuario{
+    border-radius: 11px;
+    transform: scale(1.1);
+    background-color: rgba(3, 53, 145, 0.850);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* menu */
+
+.contenedor_menu{
+    width: 100%;
+    height: 70px;
+    background: rgb(255, 204, 94);
+    padding: 0px 20px;
+}
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav > ul > li:first-child > a{
+    background-image: url(../Img/hogar.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 40px;
+}
+
+nav > ul > li:first-child:hover > a{
+    background-image: url(../Img/hogar.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+nav{
+    height: 100%;
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+
+nav  ul  li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 35px;
+    text-transform: uppercase;
+    color: rgba(3, 53, 145);
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    background: rgb(255, 174, 0);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#selected{
+    transform: scale(1.1);
+    background-color: rgb(255, 174, 0);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Submenu */
+
+nav > ul > li > ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.700);
+    z-index: 100;
+    transition: all 300ms ease;
+}
+nav > ul > li:hover > ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+nav > ul > li > ul::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid rgb(255, 255, 255);
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav > ul > li > ul > li a{
+    display: block;
+    color: rgba(3, 53, 145);
+    padding:  6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms esae;
+}
+
+nav > ul > li > ul > li a:hover{
+    background: rgb(255, 174, 0);
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* SubSubMenu */
+
+nav > ul > li > ul > li > ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 80px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    z-index: 110;
+    transition: all 300ms ease;
+}
+nav > ul > li > ul > li:hover > ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+nav > ul > li > ul > li > ul:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid rgb(255, 255, 255);
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav > ul > li > ul > li > ul a{
+    display: block;
+    color: rgba(3, 53, 145);
+    padding:  6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms esae;
+}
+
+nav > ul > li > ul > li a:hover{
+    background: rgba(3, 53, 145);
+    color: white;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* responsivos */
+
+.icon__menu{
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+#check__menu{
+    display: none;
+}
+
+@media screen and (max-width: 720px){
+    
+    .encbezado{
+        padding: 10px;
+    }
+
+    .logo img{
+        width: 200px;
+    }
+
+    nav > ul{
+        flex-direction: column;
+        background-color: rgba(172, 13, 13, 0.5);
+        position: fixed;
+        left: 0;
+        top: 158px;
+        width: 100%;
+        height: 300px;
+        transform: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav > ul > li > a:hover{
+        transform: scale(1);
+    }
+
+    nav > ul > li > ul{
+        left: 90px;
+    }
+
+    nav > ul > li:hover > ul{
+        top: 50px;
+    }
+
+    nav > ul > li:first-child a{
+        transform: scale(1);
+    }
+
+    .contenedor_cards{
+        position: relative;
+        top: 30px;
+        left: 0;
+        transform: none;
+        margin-top: 100px;
+        padding-bottom: 100px;
+    }
+
+}
+
+/* Categorias Dias */
+
+.lunes {
+    position: absolute;
+    width: 100%;
+    top: 22%;
+    z-index: 1; /* Un valor mayor que el z-index del header y las tarjetas */
+    background: rgba(255, 255, 255, 0); /* Color de fondo */
+    padding: 20px; /* Ajusta el espaciado interior según tus preferencias */
+    text-align: center; /* Alinea el contenido al centro */
+    z-index: -1;
+}
+
+.lunes h1 {
+    font-size: 24px; /* Establece el tamaño de fuente del título */
+    color: rgba(3, 53, 145); /* Color del texto */
+    margin-bottom: 10px; /* Espacio entre el título y la línea horizontal */
+}
+
+.lunes hr {
+    border: 0; 
+    height: 12px; 
+    box-shadow: inset 0 12px 12px -12px rgba(3, 53, 145);
+    z-index: -1;
+}
+
+.Martes {
+    position: absolute;
+    width: 100%;
+    top: 72%;
+    z-index: 1; /* Un valor mayor que el z-index del header y las tarjetas */
+    background: rgba(255, 255, 255, 0); /* Color de fondo */
+    padding: 20px; /* Ajusta el espaciado interior según tus preferencias */
+    text-align: center; /* Alinea el contenido al centro */
+    z-index: -1;
+}
+
+.Martes h1 {
+    font-size: 24px; /* Establece el tamaño de fuente del título */
+    color: rgba(3, 53, 145); /* Color del texto */
+    margin-bottom: 10px; /* Espacio entre el título y la línea horizontal */
+}
+
+.Martes hr {
+    border: 0; 
+    height: 12px; 
+    box-shadow: inset 0 12px 12px -12px rgba(3, 53, 145);
+    z-index: -1;
+}
+
+.Miercoles {
+    position: absolute;
+    width: 100%;
+    top: 124%;
+    z-index: 1; /* Un valor mayor que el z-index del header y las tarjetas */
+    background: rgba(255, 255, 255, 0); /* Color de fondo */
+    padding: 20px; /* Ajusta el espaciado interior según tus preferencias */
+    text-align: center; /* Alinea el contenido al centro */
+}
+
+.Miercoles h1 {
+    font-size: 24px; /* Establece el tamaño de fuente del título */
+    color: rgba(3, 53, 145); /* Color del texto */
+    margin-bottom: 10px; /* Espacio entre el título y la línea horizontal */
+}
+
+.Miercoles hr {
+    border: 0; 
+    height: 12px; 
+    box-shadow: inset 0 12px 12px -12px rgba(3, 53, 145);
+}
+
+.Jueves {
+    position: absolute;
+    width: 100%;
+    top: 176%;
+    z-index: 1; /* Un valor mayor que el z-index del header y las tarjetas */
+    background: rgba(255, 255, 255, 0); /* Color de fondo */
+    padding: 20px; /* Ajusta el espaciado interior según tus preferencias */
+    text-align: center; /* Alinea el contenido al centro */
+}
+
+.Jueves h1 {
+    font-size: 24px; /* Establece el tamaño de fuente del título */
+    color: rgba(3, 53, 145); /* Color del texto */
+    margin-bottom: 10px; /* Espacio entre el título y la línea horizontal */
+}
+
+.Jueves hr {
+    border: 0;
+    height: 12px;
+    -shadow: inset 0 12px 12px -12px rgba(3, 53, 145);
+}
+
+.Viernes {
+    position: absolute;
+    width: 100%;
+    top: 228%;
+    z-index: 1; /* Un valor mayor que el z-index del header y las tarjetas */
+    background: rgba(255, 255, 255, 0); /* Color de fondo */
+    padding: 20px; /* Ajusta el espaciado interior según tus preferencias */
+    text-align: center; /* Alinea el contenido al centro */
+}
+
+.Viernes h1 {
+    font-size: 24px; /* Establece el tamaño de fuente del título */
+    color: rgba(3, 53, 145); /* Color del texto */
+    margin-bottom: 10px; /* Espacio entre el título y la línea horizontal */
+}
+
+.Viernes hr {
+    border: 0; 
+    height: 12px; 
+    box-shadow: inset 0 12px 12px -12px rgba(3, 53, 145);
+}
+
+.Sabado {
+    position: absolute;
+    width: 100%;
+    top: 280%;
+    z-index: 1; /* Un valor mayor que el z-index del header y las tarjetas */
+    background: rgba(255, 255, 255, 0); /* Color de fondo */
+    padding: 20px; /* Ajusta el espaciado interior según tus preferencias */
+    text-align: center; /* Alinea el contenido al centro */
+}
+
+.Sabado h1 {
+    font-size: 24px; /* Establece el tamaño de fuente del título */
+    color: rgba(3, 53, 145); /* Color del texto */
+    margin-bottom: 10px; /* Espacio entre el título y la línea horizontal */
+}
+
+.Sabado hr {
+    border: 0; 
+    height: 12px; 
+    box-shadow: inset 0 12px 12px -12px rgba(3, 53, 145);
+}
+
+.Domingo {
+    position: absolute;
+    width: 100%;
+    top: 334%;
+    z-index: 1; /* Un valor mayor que el z-index del header y las tarjetas */
+    background: rgba(255, 255, 255, 0); /* Color de fondo */
+    padding: 20px; /* Ajusta el espaciado interior según tus preferencias */
+    text-align: center; /* Alinea el contenido al centro */
+}
+
+.Domingo h1 {
+    font-size: 24px; /* Establece el tamaño de fuente del título */
+    color: rgba(3, 53, 145); /* Color del texto */
+    margin-bottom: 10px; /* Espacio entre el título y la línea horizontal */
+}
+
+.Domingo hr {
+    border: 0; 
+    height: 12px; 
+    box-shadow: inset 0 12px 12px -12px rgba(3, 53, 145);
+}
+
+.contenedor_cards{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.contenedor_cards2{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 102%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.contenedor_cards3{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 154%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.contenedor_cards4{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 206%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.contenedor_cards5{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 258%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.contenedor_cards6{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 310%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.contenedor_cards7{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 362%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.card{
+    width: 350px;
+    margin: 10px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgb(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.863);
+    border-top: 1px solid rgba(255, 255, 255, 0.863);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 300ms;
+    z-index: -2;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Oculta el lado trasero por defecto */
+  transition: transform 0.8s; /* Transición al girar */
+}
+
+.card-back {
+  transform: rotateY(180deg); /* Inicialmente girado para ocultar el lado trasero */
+}
+
+
+.card:hover .card-back {
+  transform: rotateY(0deg); /* Aparece el lado trasero al pasar el mouse */
+}
+
+@keyframes girarY {
+    50% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(180deg);
+    }
+  }
+  
+  .card.rotatingY {
+    animation: girarY 2s linear forwards;
+  }
+.card:hover{
+    transform: translateY(-10px) 
+}
+
+.card:hover .cover_card img{
+    transform: scale(1.1);
+}
+
+.cover_card{
+    width: 100%;
+    height: 180px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.cover_card img{
+    width: 110%;
+    transition: all 300ms;
+}
+
+.card h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+    color: rgba(3, 53, 145);
+}
+
+.card p{
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    color: black;
+    letter-spacing: 0.5px;
+}
+
+.card hr{
+    margin-top: 30px;
+    border: none;
+    height: 0.2px;
+    background: #41414138;
+}
+
+.footer_card{
+    margin-top: 10px;
+    display: flex;
+    color: black;
+    justify-content: space-between;
+}
+
+.footer_card h3{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+body{
+    background: rgb(255, 255, 255);
+}

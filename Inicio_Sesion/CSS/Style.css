@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap'); 
+/* Importación de la fuente 'Montserrat' desde Google Fonts para usar en el diseño */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilos iniciales del cuerpo */
+body {
+    background-color: #ffecc9;
+    background: linear-gradient(to right, #ffffff, #cfab5d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    animation-duration: 1s; /* Duración de la animación */
+    animation-fill-mode: both; /* Para mantener los estilos finales de la animación */
+}
+
+/* Estilos para el fondo del cuerpo durante la animación de inicio de sesión */
+.body-login {
+    animation-name: loginAnimation; /* Nombre de la animación para inicio de sesión */
+}
+
+/* Estilos para el fondo del cuerpo durante la animación de registro */
+.body-register {
+    animation-name: registerAnimation; /* Nombre de la animación para registro */
+}
+
+/* Keyframes para la animación de inicio de sesión */
+@keyframes loginAnimation {
+    0% {
+        background: linear-gradient(to right, #1521cee1, #ffffff);
+        transition: background-color 1.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    }
+    100% {
+        background: linear-gradient(to right, #ffffff, #cfab5d);
+        transition: background-color 1.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+
+    }
+}
+
+/* Keyframes para la animación de registro */
+@keyframes registerAnimation {
+    0% {
+        background: linear-gradient(to right, #ffffff, #cfab5d);
+        transition: background-color 1.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+
+    }
+    100% {
+        background: linear-gradient(to right, #1521cee1, #ffffff);
+        transition: background-color 1.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+
+    }
+}
+
+
+/* Estilos globales para todos los elementos en la página, como margen, relleno, fuente y caja */
+/* body {
+    background-color: #ffecc9;
+    background: linear-gradient(to right, #ffffff, #cfab5d);
+    transition: background-color 1.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+} */
+
+/* Estilos para el fondo del cuerpo durante la animación de inicio de sesión */
+/* Estilos específicos para el cuerpo de la página, incluyendo colores de fondo y diseño en flexbox */
+/* .body-login {
+    background-color: #ffecc9;
+    background: linear-gradient(to right, #ffffff, #cfab5d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+} */
+
+/* Estilos para el fondo del cuerpo durante la animación de registro */
+/* Estilos específicos para el cuerpo de la página, incluyendo colores de fondo y diseño en flexbox */
+/* .body-register {
+    background-color: #ffecc9;
+    background: linear-gradient(to right, #1521cee1, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+} */
+
+
+.container {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+/* Estilos para el contenedor principal que contiene los formularios y otros elementos */
+
+.container p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+/* Estilos para párrafos dentro del contenedor, ajustando tamaño de fuente, espaciado y margen */
+
+.container span {
+    font-size: 12px;
+}
+/* Estilos para elementos de tipo span dentro del contenedor, ajustando el tamaño de fuente */
+
+.container a {
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+/* Estilos para enlaces dentro del contenedor, incluyendo color, tamaño de fuente y espaciado */
+
+.container button {
+    background-color: #1521cee1;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+/* Estilos para botones dentro del contenedor, incluyendo colores, fuente y bordes */
+
+.container button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+}
+/* Estilos para botones con la clase 'hidden', que son transparentes con bordes blancos */
+
+.container form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+/* Estilos para los formularios dentro del contenedor, incluyendo colores de fondo y alineación */
+
+.container input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+/* Estilos para campos de entrada dentro del formulario, incluyendo colores de fondo, bordes y tamaños */
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+/* Estilos para contenedores de formularios (registro e inicio de sesión) con animaciones de transición */
+
+.sign-in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+/* Estilos específicos para el formulario de inicio de sesión, incluyendo posición y tamaño */
+
+.container.active .sign-in {
+    transform: translateX(100%);
+}
+/* Estilos aplicados cuando el formulario de inicio de sesión está activo (visible) */
+
+.sign-up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+/* Estilos específicos para el formulario de registro, incluyendo posición, opacidad y z-index */
+
+.container.active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+/* Estilos aplicados cuando el formulario de registro está activo (visible) con animación */
+
+@keyframes move {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+/* Definición de una animación llamada 'move' para alternar entre formularios */
+
+.social-icons {
+    margin: 20px 0;
+}
+/* Estilos para iconos sociales, ajustando el margen superior */
+
+.social-icons a {
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+/* Estilos para los iconos de redes sociales, ajustando bordes, tamaños y márgenes */
+
+.toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+/* Estilos para el contenedor de alternancia entre registro e inicio de sesión, incluyendo posición y efectos de transición */
+
+.container.active .toggle-container {
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+/* Estilos aplicados cuando el formulario activo está en la página, ajustando la transición de posición y bordes */
+
+.toggle {
+    background-color: #1521cee1;
+    height: 100%;
+    background: linear-gradient(to right,  #1521cee1,rgb(255, 174, 0));
+    color: #ffffff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+/* Estilos para el elemento de alternancia entre registro e inicio de sesión, incluyendo colores y animaciones */
+
+.container.active .toggle {
+    transform: translateX(50%);
+}
+/* Estilos aplicados cuando el formulario atcivo está en la página, ajustando la transición de posición del elemento de alternancia */
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+/* Estilos para los paneles izquierdo y derecho de alternancia, incluyendo tamaño, posición y alineación */
+
+.toggle-left {
+    transform: translateX(-200%);
+}
+/* Estilos específicos para el panel izquierdo cuando no está activo (fuera de la vista) */
+
+.container.active .toggle-left {
+    transform: translateX(0);
+}
+/* Estilos aplicados al panel izquierdo cuando está activo (en la vista) */
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+/* Estilos específicos para el panel derecho cuando no está activo (en la vista) */
+
+.container.active .toggle-right {
+    transform: translateX(200%);
+}
+/* Estilos aplicados al panel derecho cuando está activo (fuera de la vista) */
